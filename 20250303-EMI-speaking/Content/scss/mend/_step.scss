@@ -1,0 +1,90 @@
+.step-start{
+    min-height: calc(1.25rem*1.5 + .5rem*2);
+    .btn{
+        animation: ScaleAn 1s infinite alternate;
+    }
+}
+form{
+    position: relative;
+    min-height: 100%;
+}
+.step-mask { 
+    position: absolute;
+    z-index: 1069;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, .5);
+    -webkit-mask-image: url("../images/step-mask.png"), url("../images/step-mask.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-composite: source-out;
+    -webkit-mask-composite: subtract;
+    -moz-mask-image: url("../images/step-mask.png"), url("../images/step-mask.png");
+    -moz-mask-repeat: no-repeat;
+    -moz-mask-composite: source-out;
+    -moz-mask-composite: subtract;
+    -ms-mask-image: url("../images/step-mask.png"), url("../images/step-mask.png");
+    -ms-mask-repeat: no-repeat;
+    -ms-mask-composite: source-out;
+    -ms-mask-composite: subtract;
+    -o-mask-image: url("../images/step-mask.png"), url("../images/step-mask.png");
+    -o-mask-repeat: no-repeat;
+    -o-mask-composite: source-out;
+    -o-mask-composite: subtract;
+    mask-image: url("../images/step-mask.png"), url("../images/step-mask.png");
+    mask-repeat: no-repeat;
+    mask-composite: source-out;
+    mask-composite: subtract;
+}
+.step-content{ 
+    position: absolute;
+    z-index: 1070;
+}
+
+.step-popover{
+    --bs-popover-font-size: .9rem;
+    --bs-popover-bg: var(--bs-secondary);
+    --bs-popover-header-color: #fff;
+    --bs-popover-header-bg: var(--bs-secondary);
+    --bs-popover-body-color: #fff;
+    --bs-popover-arrow-border: var(--bs-secondary);
+    box-shadow: none;
+    filter: drop-shadow(0 0 .25rem rgba(0, 0, 0, .25));
+    .popover-body{
+        .step-num{
+            font-size: 3rem;
+            font-weight: bolder;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 1;
+            transform: translate(1rem , calc(-100% + .25em));
+            font-style: italic;
+            &::before{
+                content: attr(data-num);
+                display: inline-block;
+                position: absolute;
+                -webkit-text-stroke: 10px $secondary;
+                text-stroke: 10px $secondary;
+                z-index: -1;
+            }
+        }
+        p{
+            text-shadow: 1px 1px rgba(0,0,0, .25); 
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .btn-outline-secondary{
+        &:hover, &:active, &:focus{
+            background-color: #fff !important; 
+            color: $secondary !important; 
+            transform: scale(1.05);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.exam__textarea{
+    min-height: calc(100vh - #{$operateWH} - 1rem*2 - 1.5rem*2) !important; 
+    @media screen and (min-width: 992px) {
+    min-height: calc(100% - #{$operateWH} - 1rem) !important;  
+    }
+}
+.exam__qPic-width{
+    max-width: 100%;
+    @media screen and (min-width: 992px) {
+    max-width: 50%;    
+    }
+    @media screen and (min-width: 1025px) {
+    max-width: 41.66666667%;      
+    }
+}
+.exam__qPic{
+    img{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 35vh;
+    } 
+}
+
+.exam__textarea-auto{
+    min-height: auto !important; 
+    @media screen and (min-width: 992px) {
+    min-height: auto !important;  
+    }
+}

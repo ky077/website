@@ -1,0 +1,56 @@
+.test-counter{
+    display: inline-block;
+    background-color: $gray-600;
+    border-radius: .5rem;
+    padding: .25rem;
+    text-align: center;
+    color: #fff;
+    opacity: .75;
+    position: fixed;
+    top: calc((2rem*1 + .75rem *2) + (1.5rem + 2rem));
+    right: .75rem;
+    @media screen and (min-width: 992px) {
+    right: calc((100% - 960px)/2 + .75rem);   
+    }
+    @media screen and (min-width: 1200px) {
+    right: calc((100% - 1140px)/2 + .75rem);   
+    }
+    @media screen and (min-width: 1400px) {
+    right: calc((100% - 1320px)/2 + .75rem);   
+    }
+    .counter-text{
+        font-size: .7rem;
+        letter-spacing: .05em;
+    }
+    .counter-time{
+        font-size: 1.5rem;
+        background-color: $gray-900;
+        border-radius: .5rem;
+        padding: 0 .75rem;
+        margin-top: .25rem;
+        letter-spacing: .05em;
+    } 
+    &::before{
+        content: "";
+        display: block;
+        width: calc(100% + .75rem);
+        height: .25rem;
+        background-color: $gray-600; 
+        position: absolute;
+        top: -1rem;
+        left: 0;
+        border-radius: .5rem 0 0 .5rem;
+    } 
+    &::after{
+        content: "";
+        display: block;
+        width: .25rem;
+        height: 1rem;
+        background-color: $gray-600; 
+        position: absolute;
+        top: -1rem;
+        left: 25%;
+        box-shadow: 3.2rem 0 0 0 $gray-600; 
+        transform: translateX(-50%);
+    }
+}
