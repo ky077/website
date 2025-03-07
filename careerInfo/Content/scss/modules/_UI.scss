@@ -338,7 +338,7 @@ a{
     	margin-left: auto;
     	margin-right: auto;
 		border-radius: 0;
-		clip-path: polygon($modal-header-padding-x*2 0%, calc(100% - #{$modal-header-padding-x}*2) 0%, 100% 100%, 0% 100% );
+		clip-path: polygon($modal-header-padding-x*2 0%, calc(100% - #{$modal-header-padding-x}*2) 0%, 100% calc(100% + 1px), 0% calc(100% + 1px));
 	}
 	
 	.modal-title{
@@ -347,6 +347,6 @@ a{
 		padding: $modal-header-padding-y*.75 $modal-header-padding-x*3;
 		margin-left: auto;
 		margin-right: auto;
-		clip-path: polygon(0% 0%, 100% 0%, calc(100% - #{$modal-header-padding-x}*2) 100%, $modal-header-padding-x*2 100% );
+		clip-path: polygon(0% -1px, 100% -1px, calc(100% - #{$modal-header-padding-x}*2) 100%, $modal-header-padding-x*2 100%);
 	}
 }

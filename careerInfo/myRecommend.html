@@ -363,33 +363,38 @@
 <script src="Content/js/fn.js"></script> 
 <script src="Content/js/main.js"></script> 
 <script>
+$(document).ready(function () {
 	
-//個人資料 sticky-top
-$(window).scroll(function () { 
-	var scrollTop = $(this).scrollTop();
-	var footerOffset = $('footer').offset().top;
-	var windowHeight = $(window).height();
-
-	if (scrollTop > 300 && scrollTop + windowHeight < footerOffset) {
-		$('.user-data.sticky-top').css('top', $('header').outerHeight() + 20);
-
-	} else {
-		$('.user-data.sticky-top').css('top', '20px');
-	}
-});
+	//nav當前頁active
+	navActive('myRecommend');
 	
-//適配、對應owl-carousel
-$('.owl-carousel').owlCarousel({
-	autoplay: false,
-	smartSpeed: 300,
-    loop: false,
-    nav: true,
-	navText: ['<i class="bi bi-chevron-left"></i>', '<i class="bi bi-chevron-right"></i>'],
-	dots: false,
-	autoWidth: true,  
-	responsiveClass: true,
-	items: 1
-})	
+	//個人資料 sticky-top
+	$(window).scroll(function () { 
+		var scrollTop = $(this).scrollTop();
+		var footerOffset = $('footer').offset().top;
+		var windowHeight = $(window).height();
+
+		if (scrollTop > 300 && scrollTop + windowHeight < footerOffset) {
+			$('.user-data.sticky-top').css('top', $('header').outerHeight() + 20);
+
+		} else {
+			$('.user-data.sticky-top').css('top', '20px');
+		}
+	});
+
+	//適配、對應owl-carousel
+	$('.owl-carousel').owlCarousel({
+		autoplay: false,
+		smartSpeed: 300,
+		loop: false,
+		nav: true,
+		navText: ['<i class="bi bi-chevron-left"></i>', '<i class="bi bi-chevron-right"></i>'],
+		dots: false,
+		autoWidth: true,  
+		responsiveClass: true,
+		items: 1
+	})	
+});	
 </script>
 </body>
 </html>
