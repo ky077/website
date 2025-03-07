@@ -2,12 +2,12 @@
     "use strict";
 	
 	//load header
-	$('header').load('_header.html', function () {
+	$('header').load('header.html', function () {
 		logState();
 	});
 
 	//load header
-	$('footer').load('_footer.html');  
+	$('footer').load('footer.html');  
 	
 	logState();
 
